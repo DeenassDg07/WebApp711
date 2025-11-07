@@ -20,7 +20,7 @@ namespace WebApp711.Controllers
             this.db = db;
         }
 
-        [HttpPost]
+        [HttpPost("Login")]
         public ActionResult Login(AuthDTO login)
         {
             var client = db.Clients.FirstOrDefault(s => s.Login == login.Login
