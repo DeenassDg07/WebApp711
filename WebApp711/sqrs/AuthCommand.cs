@@ -6,7 +6,7 @@ using WebApp711.DTO;
 
 namespace WebApp711.sqrs
 {
-    public class AuthCommand : IRequest<>
+    public class AuthCommand : IRequest<string>
     {
         public AuthDTO DTO { get; set; }
         public class AuthCommandHandler :
@@ -14,7 +14,7 @@ namespace WebApp711.sqrs
         {
 
             private readonly ItCompany1135Context db;
-            public AuthCommandHandler(ItCompany1135Context db)
+            public AuthCommandHandler(ItCompany1135Context db = default)
             {
                 this.db = db;
             }
